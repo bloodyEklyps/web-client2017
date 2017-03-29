@@ -1,2 +1,57 @@
-# web-client2017
-mini-projet de fin de s4
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MiniProjet client web 2017</title>
+  <link rel="text/javascript" href="../scripts/autocomplete.js">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+</head>
+
+<body>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tab_recherche">Recherche</a></li>
+      <li><a href="#tab_vuephoto">Vue photo</a></li>
+      <li><a href="#tab_vuetable">Vue table</a></li>
+    </ul>
+  <div id="tab_recherche">
+    <form id="formulaire">
+      <table>
+        <tr>
+          <td><center>Ville :</center></td><td><input type="text" name="ville"></td>
+        </tr>
+        <tr>
+          <td>Nombre d'images à afficher</td>
+          <td><select name="nbImg">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+          </select>
+          </td>
+        </tr>
+        <tr>
+          <td><center>Vue :</center></td><td> Photo <input type="radio" value="photo"> Table <input type="radio" value="table"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="submit" label="rechercher"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="tab_vuephoto">
+  </div>
+  <div id="tab_vuetable">
+  </div>
+</div>
+</body>
+</html>
