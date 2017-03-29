@@ -23,10 +23,10 @@
       <li><a href="#tab_vuetable">Vue table</a></li>
     </ul>
   <div id="tab_recherche">
-    <form id="formulaire">
+    <form id="formulaire" method="get" action="http://infoweb/~e155631p/miniproj_clientweb/commune.php">
       <table>
         <tr>
-          <td><center>Ville :</center></td><td><input type="text" name="ville"></td>
+          <td><center>Ville :</center></td><td><input type="text" name="ville" id="recherche"></td>
         </tr>
         <tr>
           <td>Nombre d'images à afficher</td>
@@ -44,7 +44,7 @@
           <td><center>Vue :</center></td><td> Photo <input type="radio" value="photo"> Table <input type="radio" value="table"></td>
         </tr>
         <tr>
-          <td><input type="button" id="button" value="rechercher"></td>
+          <td><center><input type="button" id="button" value="rechercher"><span class="ui-icon ui-icon-search"></span></center></td>
         </tr>
       </table>
     </form>
