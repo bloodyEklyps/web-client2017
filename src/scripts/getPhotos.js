@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
   //quand on click sur "b" ca affiche les photos
-  $("#b").on("click", function(){
+  $("#button").on("click", function(){
 
     $.ajax({
       url:'http://api.flickr.com/services/feeds/photos_public.gne',
@@ -13,16 +13,17 @@ $(document).ready(function(){
 
 
       success:function(data){
+        console.log(data);
         //data = objet avec json de toutes les photos
         //item = 1 objet de type photo
         $.each(data.items, function(i,item){
           console.log(item.media.m);
 
           //ajout de la photo
-          $("<img/>").attr("src", item.media.m).appendTo("#images");
+          $("<img/>").attr("src", item.media.m).appendTo("#test_photo");
 
-          //la limite de photo <-- changer avec le "spinner"
-          if ( i == 50 ) return false ;
+          //la limite de photo, 20 max <-- changer avec le "spinner"
+          if ( i == 5 ) return false ;
         });
       },
 

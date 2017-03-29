@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="scripts/getPhotos.js"></script>
   <script>
   $( function() {
     $( "#tabs" ).tabs();
@@ -43,12 +44,13 @@
           <td><center>Vue :</center></td><td> Photo <input type="radio" value="photo"> Table <input type="radio" value="table"></td>
         </tr>
         <tr>
-          <td><input type="submit" name="submit" label="rechercher"></td>
+          <td><input type="button" id="button" value="rechercher"></td>
         </tr>
       </table>
     </form>
   </div>
   <div id="tab_vuephoto">
+    <div id="test_photo"></div>
   </div>
   <div id="tab_vuetable">
   </div>

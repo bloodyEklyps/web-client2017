@@ -2,6 +2,13 @@
 mini-projet de fin de s4
 
 
+
+utiliser $( ".selector" ).tabs( "load", "#foo" ); pour changer d'onglet
+
+
+
+
+
 format de la requete avec la méthode getPhoto (la méthode qui nous intéresse si j'ai bien compris)
 
 -------------------
