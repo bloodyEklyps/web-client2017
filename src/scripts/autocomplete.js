@@ -1,16 +1,17 @@
-$("#recherche").autocomplete({
-  source :
-})
-
-function getVilles(commune){
-  $.ajax({
-    url: "http://infoweb/~e155631p/miniproj_clientweb/commune.php",
-    type : 'GET',
-    dataType : 'json',
-    data: 'commune='+commune.val(),
-
-    success: function(codeJSONSucces, statut){
-      return codeJSONSucces;
-    }
-  })
-}
+$(document).ready(function(){
+$('#recherche').autocomplete({
+        source : function(requete, reponse){ // les deux arguments représentent les données nécessaires au plugin
+            $.ajax({
+                url:'http://infoweb-ens/~jacquin-c/codePostal/commune.php',
+                type:'GET',
+                dataType:'json',
+                data : 'commune='+$('#recherche').val(),
+                success : function(donnee){
+                    reponse($.map(donnee, function(objet){
+                        return objet.Ville; // on retourne cette forme de suggestion
+                }));
+                }
+            });
+        }
+    });
+});
