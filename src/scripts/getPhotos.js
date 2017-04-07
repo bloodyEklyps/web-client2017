@@ -29,17 +29,45 @@ $(document).ready(function(){
 
           //data = objet avec json de toutes les photos
           //item = 1 objet de type photo
+          var html = $("#table").html();
+
           $.each(data.items, function(i,item){
-            console.log(item.media.m);
+            //console.log(item.media.m);
+            var date = item.date_taken;
+            var titre = item.title;
+            var desc = item.description;
 
             //ajout de la photo
             $("<img/>").attr("src", item.media.m).appendTo("#photo_vue");
-            $("<img/>").attr("src", item.media.m).appendTo("#photo_table");
+
+
+            html += "<tr><td>"+date+"</td>"
+          /*  html += "<td>"+date+"</td>"
+            html += "<td>"+date+"</td>"*/
+            html += "<td>"+date+"</td></tr>"
+
+            /*
+            $("#table").html($("#table").html()+"<tr>");
+
+            //$("</br>").appendTo("#photo_table");
+            $("#table").html($("#table").html()+"<td>");
+            $("<img/>").attr("src", item.media.m).appendTo("#table");
+            $("#table").html($("#table").html()+"</td>");
+
+            $("#table").html($("#table").html()+"<td>"+titre+"</td>");
+
+            $("#table").html($("#table").html()+"<td>"+date+"</td>");
+
+            $("#table").html($("#table").html()+"<td>"+desc+"</td>");
+
+            $("#table").html($("#table").html()+"</tr>");*/
+
 
             //la limite de photo, 20 max <-- changer avec le "spinner"
             var nb = $("#spinner").val()
             if ( i == nb-1 ) return false ;
-          });
+          });//fin du each
+          console.log(html);
         },
 
         error: function(resultat,statut,erreur){
