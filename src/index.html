@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <!--<script src="scripts/getPhotos.js"></script>-->
+  <script src="scripts/getPhotos.js"></script>
   <script src="scripts/autocomplete.js"></script>
   <script>
   $( function() {
@@ -16,43 +16,41 @@
 </head>
 
 <body>
+
+  <form id="formulaire" method="get" action="http://infoweb/~e155631p/miniproj_clientweb/commune.php">
+    <table>
+      <tr>
+        <td><center>Ville :</center></td><td><input type="text" name="ville" id="recherche"></td>
+      </tr>
+      <tr>
+        <td>Nombre d'images à afficher</td>
+        <td><select name="maxRows" id="spinner">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td><center><input type="button" id="button" value="rechercher"><span class="ui-icon ui-icon-search"></span></center></td>
+      </tr>
+    </table>
+  </form>
+</br>
   <div id="tabs">
     <ul>
-      <li><a href="#tab_recherche">Recherche</a></li>
       <li><a href="#tab_vuephoto">Vue photo</a></li>
       <li><a href="#tab_vuetable">Vue table</a></li>
     </ul>
   <div id="tab_recherche">
-    <form id="formulaire" method="get" action="http://infoweb/~e155631p/miniproj_clientweb/commune.php">
-      <table>
-        <tr>
-          <td><center>Ville :</center></td><td><input type="text" name="ville" id="recherche"></td>
-        </tr>
-        <tr>
-          <td>Nombre d'images à afficher</td>
-          <td><select name="maxRows">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-          </select>
-          </td>
-        </tr>
-        <tr>
-          <td><center>Vue :</center></td><td> Photo <input type="radio" value="photo"> Table <input type="radio" value="table"></td>
-        </tr>
-        <tr>
-          <td><center><input type="button" id="button" value="rechercher"><span class="ui-icon ui-icon-search"></span></center></td>
-        </tr>
-      </table>
-    </form>
+
   </div>
   <div id="tab_vuephoto">
-    <div id="test_photo"></div>
+    <div id="photo_vue"></div>
   </div>
   <div id="tab_vuetable">
+    <div id="photo_table"></div>
   </div>
 </div>
 </body>
