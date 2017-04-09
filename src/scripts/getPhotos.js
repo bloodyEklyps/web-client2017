@@ -36,37 +36,26 @@ $(document).ready(function(){
             var date = item.date_taken;
             var titre = item.title;
             var desc = item.description;
+            var img = "<img src="+item.media.m+"/>"
+
+            console.log("desc=" + desc);
 
             //ajout de la photo
             $("<img/>").attr("src", item.media.m).appendTo("#photo_vue");
 
-
-            html += "<tr><td>"+date+"</td>"
-          /*  html += "<td>"+date+"</td>"
-            html += "<td>"+date+"</td>"*/
-            html += "<td>"+date+"</td></tr>"
-
-            /*
-            $("#table").html($("#table").html()+"<tr>");
-
-            //$("</br>").appendTo("#photo_table");
-            $("#table").html($("#table").html()+"<td>");
-            $("<img/>").attr("src", item.media.m).appendTo("#table");
-            $("#table").html($("#table").html()+"</td>");
-
-            $("#table").html($("#table").html()+"<td>"+titre+"</td>");
-
-            $("#table").html($("#table").html()+"<td>"+date+"</td>");
-
-            $("#table").html($("#table").html()+"<td>"+desc+"</td>");
-
-            $("#table").html($("#table").html()+"</tr>");*/
-
+            //html += "<tr><td>"+$("<img/>").attr("src", item.media.m).get(0)+"</td>";
+            html += "<td>"+img+"</td>";
+            html += "<td>"+titre+"</td>";
+            html += "<td>"+date+"</td>";
+            html += "<td>"+desc+"</td></tr>";
 
             //la limite de photo, 20 max <-- changer avec le "spinner"
             var nb = $("#spinner").val()
             if ( i == nb-1 ) return false ;
           });//fin du each
+
+          $("#table").html(html);
+
           console.log(html);
         },
 
