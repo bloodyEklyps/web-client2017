@@ -4,6 +4,8 @@ mini-projet de fin de s4
 fait :
   - le requete ajax pour l'api flickr
   - l'autocomplete
+  - vue table
+  - gérer les date dans la table
 
 à faire :
-  - vue table
+  - affichage du détail sur vue photo

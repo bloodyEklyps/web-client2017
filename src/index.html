@@ -21,6 +21,9 @@
     <table>
       <tr>
         <td><center>Ville :</center></td><td><input type="text" name="ville" id="recherche"></td>
+        <td>
+          <p>Pas avant le :</p>
+        </td>
       </tr>
       <tr>
         <td>Nombre d'images à afficher</td>
@@ -30,6 +33,66 @@
           <option value="15">15</option>
           <option value="20">20</option>
         </select>
+        </td>
+        <td>
+          <select id="jour" name="jour" />
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+          </select>
+            <select id="mois" name="mois" />
+              <option value=1>Janvier</option>
+              <option value=2>Février</option>
+              <option value=3>Mars</option>
+              <option value=4>Avril</option>
+              <option value=5>Mai</option>
+              <option value=6>Juin</option>
+              <option value=7>Juillet</option>
+              <option value=8>Août</option>
+              <option value=9>Septembre</option>
+              <option value=10>Octobre</option>
+              <option value=11>Novembre</option>
+              <option value=12>Décembre</option>
+            </select>
+            <select id="annee" name="annee"/>
+              <option>2009</option>
+              <option>2010</option>
+              <option>2011</option>
+              <option>2012</option>
+              <option>2013</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2016</option>
+              <option>2017</option>
+            </select>
         </td>
       </tr>
       <tr>
@@ -47,22 +110,10 @@
 
   </div>
   <div id="tab_vuephoto">
-    <div id="photo_vue"></div>
+    <center><div id="photo_vue"></div></center>
   </div>
   <div id="tab_vuetable">
     <table id="table" style="border:1px solid black;">
-      <thead>
-        <td>Image</td>
-        <td>Titre</td>
-        <td>Date</td>
-        <td>Description</td>
-      </thead>
-      <!--<tr>
-        <td id="image"></td>
-        <td id="titre"></td>
-        <td id="date"></td>
-        <td id="desc"></td>
-      </tr>-->
     </table>
   </div>
 </div>
