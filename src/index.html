@@ -18,7 +18,7 @@
 <body>
 
   <form id="formulaire" method="get" action="http://infoweb/~e155631p/miniproj_clientweb/commune.php">
-    <table>
+    <table style="width:65%;">
       <tr>
         <td><center>Ville :</center></td><td><input type="text" name="ville" id="recherche"></td>
         <td>
@@ -101,19 +101,23 @@
     </table>
   </form>
 </br>
+
+<div id="dialog"><!--on stock le dialog à afficher dans les fenètres modales--></div>
+</br>
+
   <div id="tabs">
     <ul>
       <li><a href="#tab_vuephoto">Vue photo</a></li>
       <li><a href="#tab_vuetable">Vue table</a></li>
     </ul>
-  <div id="tab_recherche">
-
-  </div>
   <div id="tab_vuephoto">
-    <center><div id="photo_vue"></div></center>
+    <center><div id="photo_vue">
+      <!--ici qu'on met les images-->
+    </div></center>
   </div>
   <div id="tab_vuetable">
-    <table id="table" style="border:1px solid black;">
+    <table id="table" style="border:1px solid black;width:90%;">
+      <!--ici qu'on met les images-->
     </table>
   </div>
 </div>
